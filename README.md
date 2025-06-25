@@ -1,11 +1,8 @@
-# EAPnix &nbsp; [![bluebuild build badge](https://github.com/kurowski/eapnix/actions/workflows/build.yml/badge.svg)](https://github.com/kurowski/eapnix/actions/workflows/build.yml)
+# EAPnix &nbsp; [![bluebuild build badge](https://github.com/UCEAP/eapnix/actions/workflows/build.yml/badge.svg)](https://github.com/UCEAP/eapnix/actions/workflows/build.yml)
 
 This is a Fedora Atomic-based operating system for the [University of California Education Abroad Program](https://uceap.universityofcalifornia.edu/). It is built using [BlueBuild](https://blue-build.org), a tool for building and distributing immutable operating systems.
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-
-This will move to https://github.com/UCEAP/eapnix if all goes well.
 
 ## Installation
 
@@ -16,7 +13,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/kurowski/eapnix-dx:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/uceap/eapnix-dx:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -24,7 +21,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/kurowski/eapnix-dx:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/uceap/eapnix-dx:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -42,5 +39,5 @@ If build on Fedora Atomic, you can generate an offline ISO with the instructions
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/kurowski/eapnix-dx
+cosign verify --key cosign.pub ghcr.io/uceap/eapnix-dx
 ```
