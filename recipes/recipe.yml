@@ -18,8 +18,24 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: rpm-ostree
+    repos:
+      - 1password.repo
+    optfix:
+      - 1Password
     install:
+      - 1password
+      - 1password-cli
+      - atuin
+      - bat
+      - btop
+      - fd-find
+      - gh
+      - onedrive
+      - ripgrep
       - neovim
+      - ShellCheck
+      - shfmt
+      - tealdeer
     # remove:
     #   - vim-minimal
     #   - vim-filesystem
