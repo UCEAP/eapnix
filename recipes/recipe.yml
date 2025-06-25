@@ -54,6 +54,10 @@ modules:
         - md.obsidian.Obsidian
         - org.chromium.Chromium
         - org.zealdocs.Zeal
+        - io.podman_desktop.PodmanDesktop
+        - io.github.getnf.embellish
+        - me.iepure.devtoolbox
+        - sh.loft.devpod
       remove:
         - org.kde.kontact
         - org.mozilla.Thunderbird
