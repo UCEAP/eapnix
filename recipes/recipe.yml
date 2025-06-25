@@ -52,7 +52,7 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       install:
         - md.obsidian.Obsidian
-        - org.chromium.Chromium
+        - com.google.Chrome
         - org.zealdocs.Zeal
         - io.podman_desktop.PodmanDesktop
         - io.github.getnf.embellish
