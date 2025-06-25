@@ -36,12 +36,12 @@ modules:
       - ShellCheck
       - shfmt
       - tealdeer
-    # remove:
-    #   - vim-minimal
-    #   - vim-filesystem
-    #   - vim-enhanced
-    #   - vim-data
-    #   - vim-common
+    remove:
+      - kate
+      - kate-libs
+      - kate-plugins
+      - kate-krunner-plugin
+      - kwrite
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -49,6 +49,7 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       install:
         - md.obsidian.Obsidian
+        - org.chromium.Chromium
         - org.zealdocs.Zeal
       remove:
         - org.kde.kontact
