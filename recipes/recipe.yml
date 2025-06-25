@@ -19,6 +19,7 @@ modules:
 
   - type: rpm-ostree
     repos:
+      - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
       - 1password.repo
     optfix:
       - 1Password
@@ -26,16 +27,23 @@ modules:
       - 1password
       - 1password-cli
       - atuin
+      - awscli2
+      - azure-cli
       - bat
       - btop
       - fd-find
       - gh
+      - glow
       - onedrive
+      - php-cli
+      - php-xml
+      - pv
       - ripgrep
       - neovim
       - ShellCheck
       - shfmt
       - tealdeer
+      - terraform
     remove:
       - kate
       - kate-libs
