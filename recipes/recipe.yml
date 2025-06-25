@@ -20,12 +20,7 @@ modules:
   - type: rpm-ostree
     repos:
       - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
-      - 1password.repo
-    optfix:
-      - 1Password
     install:
-      - 1password
-      - 1password-cli
       - atuin
       - awscli2
       - azure-cli
@@ -63,6 +58,10 @@ modules:
         - org.kde.kontact
         - org.mozilla.Thunderbird
     user: {} # Also add Flathub user repo, but no user packages
+
+  - type: bling
+    install:
+      - 1password # install 1Password (stable) and `op` CLI tool
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
