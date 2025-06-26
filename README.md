@@ -1,10 +1,22 @@
 # EAPnix &nbsp; [![bluebuild build badge](https://github.com/UCEAP/eapnix/actions/workflows/build.yml/badge.svg)](https://github.com/UCEAP/eapnix/actions/workflows/build.yml)
 
-This is a Fedora Atomic-based operating system for the [University of California Education Abroad Program](https://uceap.universityofcalifornia.edu/). It is built using [BlueBuild](https://blue-build.org), a tool for building and distributing immutable operating systems.
+This is a Fedora Atomic-based operating system for the [University of California Education Abroad Program](https://uceap.universityofcalifornia.edu/) Software Engineering team. This is a lightly customized version of [Aurora DX](https://getaurora.dev/), so please refer to the Aurora documentation to learn more about this system.
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+It is built using [BlueBuild](https://blue-build.org), a tool for building and distributing immutable operating systems.
 
 ## Installation
+
+### New system installation from ISO
+
+1. Download the ISO from https://bkurowskitest.blob.core.windows.net/linux/eapnix-dx.iso
+2. Optionally check the download
+    ```bash
+    curl https://bkurowskitest.blob.core.windows.net/linux/eapnix-dx.iso-CHECKSUM | sha256sum -c
+    ```
+3. Write the ISO to a flash drive (use [Fedora Media Writer](https://fedoraproject.org/atomic-desktops/kinoite/download) if you don't have other software for this)
+4. Boot from the flash drive and follow installation instructions
+
+### Rebase from an existing installation
 
 > [!WARNING]  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
@@ -33,6 +45,10 @@ The `latest` tag will automatically point to the latest build. That build will s
 ## ISO
 
 If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+
+1. `sudo bluebuild generate-iso --iso-name eapnix-dx.iso image ghcr.io/uceap/eapnix-dx`
+2. `az storage blob upload --account-name bkurowskitest --container-name linux --file eapnix-dx.iso`
+3. `az storage blob upload --account-name bkurowskitest --container-name linux --file eapnix-dx.iso-CHECKSUM`
 
 ## Verification
 
