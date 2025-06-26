@@ -6,7 +6,7 @@ It is built using [BlueBuild](https://blue-build.org), a tool for building and d
 
 ## Installation
 
-### New system installation from ISO
+### _Recommended_: Install new system from ISO
 
 1. Download the ISO from https://bkurowskitest.blob.core.windows.net/linux/eapnix-dx.iso
 2. Optionally check the download
@@ -16,7 +16,7 @@ It is built using [BlueBuild](https://blue-build.org), a tool for building and d
 3. Write the ISO to a flash drive (use [Fedora Media Writer](https://fedoraproject.org/atomic-desktops/kinoite/download) if you don't have other software for this)
 4. Boot from the flash drive and follow installation instructions
 
-### Rebase from an existing installation
+### _Alternative_: Rebase from an existing install
 
 > [!WARNING]  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
