@@ -54,6 +54,7 @@ modules:
       install:
         - md.obsidian.Obsidian
         - com.google.Chrome
+        - org.kde.gwenview
         - org.zealdocs.Zeal
         - io.podman_desktop.PodmanDesktop
         - io.github.getnf.embellish
