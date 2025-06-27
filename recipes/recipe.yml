@@ -40,7 +40,6 @@ modules:
       - shfmt
       - tealdeer
       - terraform
-      - util-linux-user
     remove:
       - kate
       - kate-libs
