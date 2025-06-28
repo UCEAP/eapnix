@@ -26,12 +26,12 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 Here are some recommended steps after you first boot:
 
-1. Open System Settings < Users <  Configure fingerprint authentication
-2. Open 1Password desktop
+1. Open System Settings > Users > Configure fingerprint authentication (_or you'll type your password a lot_)
+2. Open 1Password desktop (_so the next step can access secrets_)
 	1. Login to account
 	2. Settings > Developer > Use the SSH Agent
 	3. Settings > Developer > Integrate with 1Password CLI
-3. chezmoi
+3. Personalize your environment:
     ```bash
     chezmoi init YOUR_GITHUB_USERNAME
     chezmoi apply
