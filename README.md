@@ -11,31 +11,29 @@ It is built using [BlueBuild](https://blue-build.org), a tool for building and d
 1. Download the ISO from https://bkurowskitest.blob.core.windows.net/linux/eapnix-dx.iso
 2. Write the ISO to a flash drive (use [Fedora Media Writer](https://fedoraproject.org/atomic-desktops/kinoite/download) if you don't have other software for this)
 3. Boot from the flash drive and follow installation instructions
+4. _Be sure to enable full disk encryption!_
 
 ### _Alternative_: Rebase from an existing install
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
-
 To rebase an existing atomic Fedora installation to the latest build:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/uceap/eapnix-dx:latest
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/uceap/eapnix-dx:latest
+  sudo bootc switch ghcr.io/uceap/eapnix-dx:latest
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+## First boot
 
-## ISO
+Here are some recommended steps after you first boot:
 
-```bash
-sudo bluebuild generate-iso --iso-name eapnix-dx.iso image ghcr.io/uceap/eapnix-dx
-az storage blob upload --account-name bkurowskitest --container-name linux --overwrite --file eapnix-dx.iso
-az storage blob upload --account-name bkurowskitest --container-name linux --overwrite --file eapnix-dx.iso-CHECKSUM
-```
+1. Open System Settings < Users <  Configure fingerprint authentication
+2. Open 1Password desktop
+	1. Login to account
+	2. Settings > Developer > Use the SSH Agent
+	3. Settings > Developer > Integrate with 1Password CLI
+3. chezmoi
+    ```bash
+    chezmoi init YOUR_GITHUB_USERNAME
+    chezmoi apply
+    ```
+    _see http://github.com/kurowski/dotfiles for an example to get started with chezmoi_
