@@ -41,4 +41,4 @@ Here are some recommended steps after you first boot:
     chezmoi init YOUR_GITHUB_USERNAME
     chezmoi apply
     ```
-    _see http://github.com/kurowski/dotfiles for an example to get started with chezmoi_
+    (_see [Fedora Magazine: Take back your dotfiles with Chezmoi](https://fedoramagazine.org/take-back-your-dotfiles-with-chezmoi/) to learn more, or http://github.com/kurowski/dotfiles for an example tailored to EAPnix_)
