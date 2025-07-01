@@ -31,7 +31,11 @@ Here are some recommended steps after you first boot:
     1. Login to account
     2. Settings > Developer > Use the SSH Agent
     3. ~~Settings > Developer > Integrate with 1Password CLI~~
-        - _Until https://github.com/UCEAP/eapnix/issues/6 is resolved, run `op account add --address team-uceap.1password.com && eval $(op signin)` in a terminal_
+        - _Until https://github.com/UCEAP/eapnix/issues/6 is resolved, open a terminal and run:_
+            ```zsh
+            op account add --address team-uceap.1password.com
+            eval $(op signin)
+            ````
 3. Personalize your environment:
     ```bash
     chezmoi init YOUR_GITHUB_USERNAME
