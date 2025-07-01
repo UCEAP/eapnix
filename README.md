@@ -28,9 +28,10 @@ Here are some recommended steps after you first boot:
 
 1. Open System Settings > Users > Configure fingerprint authentication (_or you'll type your password a lot_)
 2. Open 1Password desktop (_so the next step can access secrets_)
-	1. Login to account
-	2. Settings > Developer > Use the SSH Agent
-	3. Settings > Developer > Integrate with 1Password CLI
+    1. Login to account
+    2. Settings > Developer > Use the SSH Agent
+    3. ~~Settings > Developer > Integrate with 1Password CLI~~
+        - _Until https://github.com/UCEAP/eapnix/issues/6 is resolved, run `op account add --address team-uceap.1password.com && eval $(op signin)` in a terminal_
 3. Personalize your environment:
     ```bash
     chezmoi init YOUR_GITHUB_USERNAME
