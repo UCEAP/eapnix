@@ -6,14 +6,14 @@ It is built using [BlueBuild](https://blue-build.org), a tool for building and d
 
 ## Installation
 
-### _Recommended_: Install new system from ISO
+### _Recommended_: Install from ISO
 
 1. Download the ISO from https://bkurowskitest.blob.core.windows.net/linux/eapnix-dx.iso
 2. Write the ISO to a flash drive (use [Fedora Media Writer](https://fedoraproject.org/atomic-desktops/kinoite/download) if you don't have other software for this)
 3. Boot from the flash drive and follow installation instructions
 4. _Be sure to enable full disk encryption!_
 
-### _Alternative_: Rebase from an existing install
+### _Alternative_: Rebase an existing install
 
 To rebase an existing atomic Fedora installation to the latest build:
 
@@ -38,7 +38,6 @@ Here are some recommended steps after you first boot:
             ````
 3. Personalize your environment:
     ```bash
-    chezmoi init YOUR_GITHUB_USERNAME
-    chezmoi apply
+    chezmoi init --apply YOUR_GITHUB_USERNAME
     ```
     (_see [Fedora Magazine: Take back your dotfiles with Chezmoi](https://fedoramagazine.org/take-back-your-dotfiles-with-chezmoi/) to learn more, or http://github.com/kurowski/dotfiles for an example tailored to EAPnix_)
