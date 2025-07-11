@@ -75,5 +75,7 @@ modules:
       - justfile.sh
       - terminus.sh
 
+  - type: initramfs # rebuild initramfs to include our custom logo
+
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
