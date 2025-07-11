@@ -17,35 +17,35 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: rpm-ostree
+  - type: dnf
     repos:
-      - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+      files:
+        - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
     install:
-      - atuin
-      - awscli2
-      - azure-cli
-      - bat
-      - btop
-      - chezmoi
-      - fd-find
-      - gh
-      - glow
-      - onedrive
-      - php-cli
-      - php-xml
-      - pv
-      - ripgrep
-      - neovim
-      - ShellCheck
-      - shfmt
-      - tealdeer
-      - terraform
+      packages:
+        - atuin
+        - awscli2
+        - azure-cli
+        - bat
+        - btop
+        - fd-find
+        - gh
+        - onedrive
+        - php-cli
+        - php-xml
+        - ripgrep
+        - neovim
+        - ShellCheck
+        - shfmt
+        - tealdeer
+        - terraform
     remove:
-      - kate
-      - kate-libs
-      - kate-plugins
-      - kate-krunner-plugin
-      - kwrite
+      packages:
+        - kate
+        - kate-libs
+        - kate-plugins
+        - kate-krunner-plugin
+        - kwrite
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -74,6 +74,10 @@ modules:
       - image_name.sh
       - justfile.sh
       - terminus.sh
+
+  - type: chezmoi
+    repository: "null"
+    disable-init: true
 
   - type: initramfs # rebuild initramfs to include our custom logo
 
