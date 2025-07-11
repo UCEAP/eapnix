@@ -27,16 +27,15 @@ To rebase an existing atomic Fedora installation to the latest build:
 Here are some recommended steps after you first boot:
 
 1. Open System Settings > Users > Configure fingerprint authentication (_or you'll type your password a lot_)
-2. Open 1Password desktop (_so the next step can access secrets_)
+2. Launch the terminal and run:
+    ```bash
+    ujust fix-onepassword-gids
+    ```
+3. Open 1Password desktop (_so the next step can access secrets_)
     1. Login to account
     2. Settings > Developer > Use the SSH Agent
-    3. ~~Settings > Developer > Integrate with 1Password CLI~~
-        - _Until https://github.com/UCEAP/eapnix/issues/6 is resolved, open a terminal and run:_
-            ```zsh
-            op account add --address team-uceap.1password.com
-            eval $(op signin)
-            ````
-3. Personalize your environment:
+    3. Settings > Developer > Integrate with 1Password CLI
+4. Personalize your environment:
     ```bash
     chezmoi init --apply YOUR_GITHUB_USERNAME
     ```

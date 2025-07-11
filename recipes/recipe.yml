@@ -72,6 +72,7 @@ modules:
   - type: script
     scripts:
       - image_name.sh
+      - justfile.sh
       - terminus.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
