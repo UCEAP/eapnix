@@ -11,7 +11,7 @@ It is built using [BlueBuild](https://blue-build.org), a tool for building and d
 1. Download the ISO from https://bkurowskitest.blob.core.windows.net/linux/eapnix-dx.iso
 2. Write the ISO to a flash drive (use [Fedora Media Writer](https://fedoraproject.org/atomic-desktops/kinoite/download) if you don't have other software for this)
 3. Boot from the flash drive and follow installation instructions
-4. _Be sure to enable full disk encryption!_
+    * _In the "Installation Destination" section, be sure to check "Encrypt my data."_
 
 ### _Alternative_: Rebase an existing install
 
