@@ -27,6 +27,7 @@ modules:
       - bat
       - btop
       - chezmoi
+      - chromium
       - fd-find
       - gh
       - glow
@@ -53,7 +54,6 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       install:
         - md.obsidian.Obsidian
-        - com.google.Chrome
         - org.kde.gwenview
         - org.zealdocs.Zeal
         - io.podman_desktop.PodmanDesktop
