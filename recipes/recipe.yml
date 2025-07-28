@@ -49,10 +49,10 @@ modules:
       - kwrite
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      install:
+    configurations:
+      - scope: system
+        notify: true
+        install:
         - md.obsidian.Obsidian
         - org.kde.gwenview
         - org.zealdocs.Zeal
@@ -60,10 +60,6 @@ modules:
         - io.github.getnf.embellish
         - me.iepure.devtoolbox
         - sh.loft.devpod
-      remove:
-        - org.kde.kontact
-        - org.mozilla.Thunderbird
-    user: {} # Also add Flathub user repo, but no user packages
 
   - type: bling
     install:
