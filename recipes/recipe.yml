@@ -29,6 +29,7 @@ modules:
       - chezmoi
       - chromium
       - fd-find
+      - firefox
       - gh
       - glow
       - onedrive
