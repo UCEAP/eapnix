@@ -29,7 +29,6 @@ modules:
       - chezmoi
       - chromium
       - fd-find
-      - firefox
       - gh
       - glow
       - onedrive
@@ -55,6 +54,7 @@ modules:
         notify: true
         install:
         - md.obsidian.Obsidian
+        - org.mozilla.firefox
         - org.kde.gwenview
         - org.zealdocs.Zeal
         - io.podman_desktop.PodmanDesktop
