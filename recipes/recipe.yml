@@ -61,6 +61,7 @@ modules:
         - io.github.getnf.embellish
         - me.iepure.devtoolbox
         - sh.loft.devpod
+        - us.zoom.Zoom
 
   - type: bling
     install:
