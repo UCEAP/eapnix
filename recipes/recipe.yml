@@ -17,9 +17,15 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: script
+    scripts:
+      - enable-google-chrome-repo.sh
+
   - type: rpm-ostree
     repos:
       - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+    optfix:
+      - google
     install:
       - atuin
       - awscli2
@@ -27,10 +33,10 @@ modules:
       - bat
       - btop
       - chezmoi
-      - chromium
       - fd-find
       - gh
       - glow
+      - google-chrome-stable
       - onedrive
       - php-cli
       - php-xml
