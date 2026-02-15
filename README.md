@@ -39,4 +39,4 @@ Here are some recommended steps after you first boot:
     ```bash
     chezmoi init --apply YOUR_GITHUB_USERNAME
     ```
-    (_see [Fedora Magazine: Take back your dotfiles with Chezmoi](https://fedoramagazine.org/take-back-your-dotfiles-with-chezmoi/) to learn more, or http://github.com/kurowski/dotfiles for an example tailored to EAPnix_)
+    (_see [Fedora Magazine: Take back your dotfiles with Chezmoi](https://fedoramagazine.org/take-back-your-dotfiles-with-chezmoi/) to learn more, or http://github.com/kurowski/dotfiles-eapnix for an example tailored to EAPnix_)
